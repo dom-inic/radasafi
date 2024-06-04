@@ -27,6 +27,8 @@ services:
       context: .
       dockerfile: ./compose/production/postgres/Dockerfile
     image: radasafi_production_postgres
+    environment:
+      POSTGRES_PASSWORD: admin1234
     container_name: radasafi_local_postgres
     volumes:
       - radasafi_local_postgres_data:/var/lib/postgresql/data
