@@ -27,7 +27,14 @@ class LocationAdmin(admin.ModelAdmin):
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ["title", "slug", "general_location", "created", "updated"]
+    list_display = [
+        "title",
+        "slug",
+        "general_location",
+        "published",
+        "created",
+        "updated",
+    ]
     list_filter = ["published", "created", "updated"]
     list_editable = ["published"]
 

@@ -1,5 +1,6 @@
-from django.contrib.auth.models import User
 from django.db import models
+
+from radasafi.users.models import User
 
 
 class Category(models.Model):
@@ -7,7 +8,7 @@ class Category(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
 
     class Meta:
-        verbose_name_singular = "category"
+        verbose_name = "category"
         verbose_name_plural = "categories"
 
     def __str__(self) -> str:
