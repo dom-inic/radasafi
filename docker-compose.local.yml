@@ -34,7 +34,7 @@ services:
       - radasafi_local_postgres_data:/var/lib/postgresql/data
       - radasafi_local_postgres_data_backups:/backups
     env_file:
-      - ./.envs/.local/.postgres
+      - ./.envs/.local/.env.postgres
 
   redis:
     image: docker.io/redis:6
