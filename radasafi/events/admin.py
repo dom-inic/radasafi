@@ -22,7 +22,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Location)
 class LocationAdmin(admin.ModelAdmin):
-    list_display = ["from_latitude", "to_latitude", "from_longitude", "to_longitude"]
+    list_display = ["latitude", "latitude", "address"]
 
 
 @admin.register(Event)
@@ -30,7 +30,8 @@ class EventAdmin(admin.ModelAdmin):
     list_display = [
         "title",
         "slug",
-        "general_location",
+        "start_location",
+        "end_location",
         "published",
         "created",
         "updated",
