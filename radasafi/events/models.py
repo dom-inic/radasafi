@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 from radasafi.users.models import User
 
@@ -50,6 +51,8 @@ class Event(models.Model):
         related_name="event_end_location",
     )
     published = models.BooleanField(default=False)
+    start_date = models.DateTimeField(default=timezone.now)
+    end_date = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
