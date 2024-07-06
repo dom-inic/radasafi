@@ -8,6 +8,16 @@ volumes:
 
 
 services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./compose/production/frontend/Dockerfile
+    image: radasafi_production_frontend
+    depends_on:
+      - django
+    ports:
+      - "3002:3000"
+
   django: &django
     build:
       context: .

@@ -4,6 +4,15 @@ volumes:
   radasafi_local_redis_data: {}
 
 services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./compose/local/frontend/Dockerfile
+    image: radasafi_local_frontend
+    depends_on:
+      - django
+    ports:
+      - "3000:3000"
   django: &django
     build:
       context: .

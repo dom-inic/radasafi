@@ -10,3 +10,7 @@
 venv
 .git
 .envs/
+node_modules
+npm-debug.log
+README.md
+.next
