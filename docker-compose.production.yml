@@ -10,7 +10,7 @@ volumes:
 services:
   frontend:
     build:
-      context: .
+      context: ./frontend
       dockerfile: ./compose/production/frontend/Dockerfile
     image: radasafi_production_frontend
     depends_on:

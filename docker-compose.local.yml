@@ -6,7 +6,7 @@ volumes:
 services:
   frontend:
     build:
-      context: .
+      context: ./frontend
       dockerfile: ./compose/local/frontend/Dockerfile
     image: radasafi_local_frontend
     depends_on:
