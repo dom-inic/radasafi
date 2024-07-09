@@ -13,6 +13,7 @@ services:
       - django
     ports:
       - "3000:3000"
+
   django: &django
     build:
       context: .
